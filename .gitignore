@@ -1,0 +1,52 @@
+# Ignorar o diretório de dependências do Composer
+/vendor/
+
+# Ignorar o arquivo de bloqueio de dependências, caso não queira versioná-lo
+# (descomente a linha abaixo se quiser ignorar o composer.lock)
+/composer.lock
+
+# Ignorar arquivos de cache do Composer
+composer.phar
+
+# Ignorar arquivos do ambiente de desenvolvimento
+.env
+.env.local
+.env.*.local
+
+# Ignorar arquivos de log
+/logs
+*.log
+
+# Ignorar IDEs e editores de texto específicos
+/.idea/
+/.vscode/
+/nbproject/
+/phpstorm.meta.php
+
+# Ignorar cache e outros arquivos temporários
+/cache/
+/tmp/
+
+# Ignorar arquivos do PHPUnit
+phpunit.xml
+phpunit.xml.dist
+
+# Ignorar uploads e outros arquivos estáticos
+/public/uploads
+/public/storage
+
+# Ignorar arquivos de deploy automatizado
+/.env.*.php
+
+# Ignorar arquivos gerados pelo sistema
+Thumbs.db
+.DS_Store
+
+#ignora vídeos
+*.mov
+*.M4V
+*.mp4
+
+*.psd
+*.xcf
+
