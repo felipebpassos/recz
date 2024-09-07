@@ -80,8 +80,8 @@ ul {
 
 .fade-top,
 .fade-bottom {
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 80%;
     height: 12%;
     position: absolute;
     z-index: 11;
@@ -173,13 +173,13 @@ section {
 
 .capa .texto {
     position: absolute;
-    top: 37%;
+    top: 35%;
     left: 12.5%;
     max-width: 30%;
 }
 
 .capa .texto h2 {
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 .capa .texto p {
@@ -189,7 +189,7 @@ section {
 
 .capa .btn-primario {
     position: absolute;
-    top: 66%;
+    top: 69%;
     left: 12.5%;
 }
 
@@ -228,7 +228,7 @@ section {
 }
 
 .numeros {
-    padding: 160px 0;
+    padding: 200px 0;
     min-height: 53px;
     color: #ffffff;
     text-align: center;
@@ -269,7 +269,7 @@ section {
 
 .sobre {
     position: relative;
-    padding: 200px 20px;
+    padding: 240px 20px;
     padding-top: 280px;
 }
 
@@ -304,13 +304,14 @@ section h1 {
 .cases {
     position: relative;
     padding: 100px 20px;
-    padding-top: 280px;
+    padding-top: 500px;
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
 }
 
 .cases h1 {
+    top: 180px;
     left: 20px;
 }
 
@@ -324,12 +325,21 @@ section h1 {
 }
 
 .carousel-section {
-    margin-bottom: 40px;
+    margin-bottom: 100px;
 }
 
 .carousel-section h2 {
+    color: var(--text-white);
     font-size: 24px;
     margin-bottom: 30px;
+}
+
+.carousel-section h2 span {
+    margin-right: 10px;
+}
+
+.carousel-section h2 span img {
+    height: 14px;
 }
 
 .custom-carousel {
@@ -364,9 +374,19 @@ section h1 {
     flex: 0 0 auto;
     width: 300px;
     height: 533px;
-    /* proporcao 9:16 */
     margin-right: 15px;
     background-color: #0c0c0c;
+    cursor: pointer;
+    filter: brightness(0.35);
+    /* Aplica brilho reduzido por padrão */
+    transition: filter 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-carousel-item.ativo {
+    filter: brightness(1);
+    /* Remove o brilho reduzido quando ativo */
 }
 
 .custom-carousel-item img {
@@ -376,7 +396,50 @@ section h1 {
     user-select: none;
     pointer-events: none;
     -webkit-user-drag: none;
+    transition: all 2s ease-out;
     /* Impede arrastar a imagem em navegadores WebKit */
+}
+
+.custom-carousel-item:hover img {
+    transform: scale(1.1);
+}
+
+.custom-carousel-item .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.custom-carousel-item:hover .play-icon {
+    opacity: 1;
+}
+
+.custom-carousel-item .degrade {
+    position: absolute;
+    bottom: 0;
+    height: 160px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-white);
+    opacity: 0;
+    transition: all 0.5s ease;
+    background: linear-gradient(to bottom, transparent, var(--black));
+}
+
+.custom-carousel-item:hover .degrade {
+    opacity: 1;
+}
+
+.custom-carousel-item .degrade span {
+    transform: translateY(30px);
 }
 
 /* Seção TIME */
@@ -423,7 +486,7 @@ section h1 {
     filter: grayscale(0) brightness(100%);
 }
 
-.fade-bottom {
+.equipe .fade-bottom {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -472,18 +535,18 @@ section h1 {
 
 #contato {
     position: relative;
-    padding-top: 360px;
+    padding-top: 260px;
     padding-bottom: 20px;
 }
 
 .contato h1 {
-    top: 160px;
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 form {
-    padding-top: 30px;
+    padding-top: 40px;
     max-width: 950px;
     margin: auto;
 }
@@ -627,6 +690,126 @@ footer a {
 
 footer a:hover {
     color: rgb(200, 200, 200);
+}
+
+/* Estilo do modal */
+.modal {
+    display: none;
+    /* Oculto por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    /* Fundo transparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: transparent;
+    padding: 10px 0;
+    padding-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+}
+
+#logo-modal {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 40px;
+}
+
+.close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--text-white);
+    z-index: 9999;
+    opacity: 0.6;
+    transition: all 0.8s ease;
+}
+
+.close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#loading img {
+    width: 800px;
+}
+
+video {
+    width: 300px;
+    height: auto;
+    display: block;
+    background-color: black;
+}
+
+/* Personalizar os controles de vídeo, como barra de progresso, botão de play/pause */
+.custom-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding: 10px;
+}
+
+.controls-container {
+    margin: 0 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-bar {
+    flex: 1;
+    margin: 0 10px;
+    height: 5px;
+    background-color: #555;
+    position: relative;
+}
+
+.progress-bar .progress {
+    width: 0;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+}
+
+.play-pause-btn,
+.volume-btn,
+.fullscreen-btn {
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.play-pause-btn,
+.volume-btn {
+    margin-left: 15px;
+}
+
+/* Força o body a esconder a barra de rolagem ao abrir o modal */
+body.no-scroll {
+    overflow-y: hidden;
+}
+
+main.no-scroll {
+    filter: blur(5px);
 }
 
 @media (min-width: 820px) {

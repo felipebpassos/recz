@@ -1,6 +1,9 @@
 # Ignorar o diretório de dependências do Composer
 /vendor/
 
+# Ignorar o diretório de arquivos
+/img/arquivos/
+
 # Ignorar o arquivo de bloqueio de dependências, caso não queira versioná-lo
 # (descomente a linha abaixo se quiser ignorar o composer.lock)
 /composer.lock

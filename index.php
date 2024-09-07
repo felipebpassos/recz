@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Felipe Passos | Landing Page desenvolvida por Simplify Web">
-    <meta name="keywords" content="produtora, Aracaju, Sergipe, Melhor produtora de Aracaju, Melhor produtora de Sergipe, Melhor produtora do Nordeste, Melhor produtora do Brasil, filmaker, edição de vídeos, gravações, filmagens">
+    <meta name="keywords" content="Recz, filmagem, reels, instagram, produtora, Aracaju, aracaju, Sergipe, Melhor produtora de Aracaju, Melhor produtora de Sergipe, Melhor produtora do Nordeste, Melhor produtora do Brasil, filmaker, edição de vídeos, gravações, filmagens">
     <meta name="robots" content="index,follow">
 
-    <meta property="og:image" content="./img/logo.png">
-    <meta property="og:title" content="Recz Filmes | Autoridade em Produção e Edição de Vídeos">
+    <meta property="og:image" content="./img/logo_recz.png">
+    <meta property="og:title" content="Recz Films | Autoridade em Produção e Edição de Vídeos">
     <meta property="og:description" content="">
 
-    <title>Recz Filmes | Autoridade em Produção e Edição de Vídeos</title>
+    <title>Recz Films | Autoridade em Produção e Edição de Vídeos</title>
 
     <link rel="icon" href="./img/favicon.ico">
 
@@ -42,7 +42,7 @@
         <!-- Capa -->
         <section class="capa" id="capa">
             <img id="background" src="./img/background-fullest.png" alt="Background Image">
-            <img id="time" src="./img/recz_time.png" alt="Time Recz Image">
+            <img id="time" src="./img/recz_time.webp" alt="Time Recz Image">
             <img id="logo" src="./img/logo.png" alt="Recz Logo">
             <div class="fade-bottom"></div>
             <div class="texto fade-in-element">
@@ -51,7 +51,7 @@
             </div>
             <a href="#contato"><button class="btn-primario fade-in-element">QUERO FAZER PARTE</button></a>
             <div class="redes-sociais">
-                <a href="https://www.instagram.com" target="_blank">
+                <a href="https://www.instagram.com/reczfilms/" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
@@ -95,7 +95,7 @@
                 <div class="row">
                     <!-- Coluna de imagem -->
                     <div class="col-md-6">
-                        <img src="https://via.placeholder.com/500" alt="Descrição da imagem" class="img-fluid">
+
                     </div>
                     <!-- Coluna de texto -->
                     <div class="col-md-6">
@@ -107,66 +107,164 @@
             </div>
         </section>
 
+        <!-- Clientes/Brands Section -->
+        <section class="clientes" id="clientes">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
+                        <img src="./img/brands/ambev.webp" alt="Cervejaria Ambev">
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
+                        <img src="./img/brands/dominos.webp" alt="Domino's Pizza">
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
+                        <img src="./img/brands/track.webp" alt="Track & Field">
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
+                        <img src="./img/brands/carapreta.webp" alt="Cara Preta">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
+                        <img src="./img/brands/acai_aju.webp" alt="Açaí Aju">
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
+                        <img src="./img/brands/julima.webp" alt="Chefe Ju Lima">
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
+                        <img src="./img/brands/otto.webp" alt="OTTO">
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
+                        <img src="./img/brands/sarauzin.webp" alt="Sarauzin">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Cases de sucesso | Portfolio -->
         <section class="cases" id="cases">
             <h1 class="fade-in-element">CASES</h1>
 
             <!-- Carrossel para Eventos -->
             <div class="carousel-section fade-in-element">
-                <h2>Eventos</h2>
+                <h2><span><img src="./img/red_dot.png" alt="Rec"></span>Eventos</h2>
                 <div class="custom-carousel">
                     <div class="custom-carousel-wrapper">
-                        <div class="custom-carousel-item"><img src="./img/evento01_thumb.png" alt="Thumbnail 1" draggable="false"></div>
-                        <div class="custom-carousel-item"><img src="./img/evento02_thumb.png" alt="Thumbnail 2" draggable="false"></div>
-                        <div class="custom-carousel-item"><img src="./img/evento03_thumb.png" alt="Thumbnail 3" draggable="false"></div>
-                        <div class="custom-carousel-item"><img src="./img/evento04_thumb.jpeg" alt="Thumbnail 1" draggable="false"></div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Eventos/Sarauzin2.M4V">
+                            <img src="./img/thumbnails/evento01.png" alt="Thumbnail 1" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Eventos/michelle_pontes.M4V">
+                            <img src="./img/thumbnails/evento02.png" alt="Thumbnail 2" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Eventos/Sarauzin.M4V">
+                            <img src="./img/thumbnails/evento03.png" alt="Thumbnail 3" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Eventos/aftermovie.MOV">
+                            <img src="./img/thumbnails/evento04.jpeg" alt="Thumbnail 1" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Carrossel para Gastronomia -->
             <div class="carousel-section fade-in-element">
-                <h2>Gastronomia</h2>
+                <h2><span><img src="./img/red_dot.png" alt="Rec"></span>Gastronomia</h2>
                 <div class="custom-carousel">
                     <div class="custom-carousel-wrapper">
-                        <div class="custom-carousel-item"><img src="./img/gastronomia01_thumb.png" alt="Thumbnail 1" draggable="false"></div>
-                        <div class="custom-carousel-item"><img src="./img/gastronomia02_thumb.png" alt="Thumbnail 2" draggable="false"></div>
-                        <div class="custom-carousel-item"><img src="./img/gastronomia03_thumb.png" alt="Thumbnail 3" draggable="false"></div>
-                        <div class="custom-carousel-item"><img src="./img/gastronomia04_thumb.png" alt="Thumbnail 1" draggable="false"></div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Gastronomia/acucena.mov">
+                            <img src="./img/thumbnails/gastronomia01.png" alt="Thumbnail 1" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Gastronomia/madi.mov">
+                            <img src="./img/thumbnails/gastronomia02.png" alt="Thumbnail 2" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Gastronomia/otto.m4v">
+                            <img src="./img/thumbnails/gastronomia03.png" alt="Thumbnail 3" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Gastronomia/pescatore.mp4">
+                            <img src="./img/thumbnails/gastronomia04.png" alt="Thumbnail 1" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Carrossel para Imóveis -->
             <div class="carousel-section fade-in-element">
-                <h2>Imóveis</h2>
+                <h2><span><img src="./img/red_dot.png" alt="Rec"></span>Imóveis</h2>
                 <div class="custom-carousel">
                     <div class="custom-carousel-wrapper">
-                        <div class="custom-carousel-item"><img src="./img/imovel01_thumb.png" alt="Thumbnail 1" draggable="false"></div>
-                        <div class="custom-carousel-item"><img src="./img/imovel02_thumb.png" alt="Thumbnail 2" draggable="false"></div>
-                        <div class="custom-carousel-item"><img src="./img/imovel03_thumb.png" alt="Thumbnail 3" draggable="false"></div>
-                        <div class="custom-carousel-item"><img src="./img/imovel04_thumb.png" alt="Thumbnail 1" draggable="false"></div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Imoveis/dicon.mov">
+                            <img src="./img/thumbnails/imovel01.png" alt="Thumbnail 1" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Imoveis/exito.mov">
+                            <img src="./img/thumbnails/imovel02.png" alt="Thumbnail 2" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Imoveis/arq_felipe.mov">
+                            <img src="./img/thumbnails/imovel03.png" alt="Thumbnail 3" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Imoveis/corretor_matheus.mov">
+                            <img src="./img/thumbnails/imovel04.png" alt="Thumbnail 1" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Carrossel para Outros -->
             <div class="carousel-section fade-in-element">
-                <h2>Outros</h2>
+                <h2><span><img src="./img/red_dot.png" alt="Rec"></span>Campanhas</h2>
                 <div class="custom-carousel">
                     <div class="custom-carousel-wrapper">
-                        <div class="custom-carousel-item"><img src="./img/outros01_thumb.png" alt="Thumbnail 1" draggable="false"></div>
-                        <div class="custom-carousel-item"><img src="./img/outros02_thumb.png" alt="Thumbnail 2" draggable="false"></div>
-                        <div class="custom-carousel-item"><img src="./img/outros03_thumb.png" alt="Thumbnail 3" draggable="false"></div>
-                        <div class="custom-carousel-item"><img src="./img/outros04_thumb.png" alt="Thumbnail 1" draggable="false"></div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Campanhas/lea.M4V">
+                            <img src="./img/thumbnails/campanha01.png" alt="Thumbnail 1" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Campanhas/michelle_pontes.m4v">
+                            <img src="./img/thumbnails/campanha02.png" alt="Thumbnail 2" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Campanhas/lacy.mov">
+                            <img src="./img/thumbnails/campanha03.png" alt="Thumbnail 3" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
+                        <div class="custom-carousel-item" data-video-src="./videos/Campanhas/beach_tennis.M4V">
+                            <img src="./img/thumbnails/campanha04.png" alt="Thumbnail 1" draggable="false">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="degrade"><span>Ver vídeo</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Por que contratar a Recz? -->
+        <!-- Por que contratar a Recz? 
         <section class="vantagens" id="vantagens">
-        </section>
+        </section> -->
 
         <!-- Seção de Time -->
         <section class="equipe" id="equipe">
@@ -191,40 +289,6 @@
                         </div>
                         <h2>Léo Tavares</h2>
                         <p class="team-role">Filmaker & Editor</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Clientes/Brands Section -->
-        <section class="clientes" id="clientes">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
-                        <img src="./img/brands/julima.png" alt="Cliente 1">
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
-                        <img src="./img/brands/dominos.jpg" alt="Cliente 2">
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
-                        <img src="./img/brands/track.png" alt="Cliente 3">
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
-                        <img src="./img/brands/sarauzin.jpg" alt="Cliente 4">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
-                        <img src="./img/brands/acai_aju.png" alt="Cliente 5">
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
-                        <img src="./img/brands/lea.png" alt="Cliente 6">
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
-                        <img src="./img/brands/otto.png" alt="Cliente 7">
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 brand-item">
-                        <img src="./img/brands/michelle_pontes.png" alt="Cliente 8">
                     </div>
                 </div>
             </div>
@@ -260,7 +324,7 @@
                         <div class="options-container">
                             <div class="option" data-value="1">Vídeo único/pontual</div>
                             <div class="option" data-value="2">Pacote mensal</div>
-                            <div class="option" data-value="3">Aberto a sugestões</div>
+                            <div class="option" data-value="3">Estou aberto a opções</div>
                         </div>
                     </div>
                     <div class="form-group mb-4">
@@ -275,18 +339,31 @@
 
     <footer>
         <div class="copyright">
-            &copy; 2024, Recz Filmes | Desenvolvido por <a href="https://www.instagram.com/simplifyweb/" target="_blank">Simplify Web</a>
+            &copy; 2024, Recz Films | Desenvolvido por <a href="https://www.instagram.com/simplifyweb/" target="_blank">Simplify Web</a>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div id="custom-modal" class="modal">
+        <img id="logo-modal" src="./img/logo.png" alt="Recz Logo">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+    <script src="./js/background-img.js"></script>
     <script src="./js/fade-in-element.js"></script>
     <script src="./js/numbers.js"></script>
     <script src="./js/titulo-move-scroll.js"></script>
     <script src="./js/toggle-menu.js"></script>
     <script src="./js/scroll-to-section.js"></script>
+    <script src="./js/thumb-ativa.js"></script>
+    <script src="./js/modal-video.js"></script>
     <script src="./js/carrossel.js"></script>
     <script src="./js/simple-select.js"></script>
     <script src="./js/inputs.js"></script>
