@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
+    <script src="./js/background-img.js"></script>
+
 </head>
 
 <body>
@@ -37,7 +39,11 @@
     }
     ?>
 
-    <main>
+    <div id="loading-main">
+        <img src="./img/loading.gif" alt="Loading" />
+    </div>
+
+    <main id="main-content" class="hidden-content">
 
         <!-- Capa -->
         <section class="capa" id="capa">
@@ -49,7 +55,7 @@
                 <h2>Sua empresa com <span style="color: var(--red);">conteúdo de cinema</span></h2>
                 <p>Transfomamos ideias em videos virais. Especialistas em criação de conteúdo. Mais de 50 milhões de visualizações para clientes.</p>
             </div>
-            <a href="#contato"><button class="btn-primario fade-in-element">QUERO FAZER PARTE</button></a>
+            <a href="#contato"><button class="btn-primario fade-in-element">ORCE SEU PROJETO</button></a>
             <div class="redes-sociais">
                 <a href="https://www.instagram.com/reczfilms/" target="_blank">
                     <i class="fab fa-instagram"></i>
@@ -145,7 +151,7 @@
         <section class="cases" id="cases">
             <h1 class="fade-in-element">CASES</h1>
 
-            <!-- Carrossel para Eventos -->
+            <!-- Carrossel para Vídeos de Eventos -->
             <div class="carousel-section fade-in-element">
                 <h2><span><img src="./img/red_dot.png" alt="Rec"></span>Eventos</h2>
                 <div class="custom-carousel">
@@ -174,7 +180,7 @@
                 </div>
             </div>
 
-            <!-- Carrossel para Gastronomia -->
+            <!-- Carrossel para Vídeos de Gastronomia -->
             <div class="carousel-section fade-in-element">
                 <h2><span><img src="./img/red_dot.png" alt="Rec"></span>Gastronomia</h2>
                 <div class="custom-carousel">
@@ -203,7 +209,7 @@
                 </div>
             </div>
 
-            <!-- Carrossel para Imóveis -->
+            <!-- Carrossel para Vídeos de Imóveis -->
             <div class="carousel-section fade-in-element">
                 <h2><span><img src="./img/red_dot.png" alt="Rec"></span>Imóveis</h2>
                 <div class="custom-carousel">
@@ -232,7 +238,7 @@
                 </div>
             </div>
 
-            <!-- Carrossel para Outros -->
+            <!-- Carrossel para Vídeos de Campanhas -->
             <div class="carousel-section fade-in-element">
                 <h2><span><img src="./img/red_dot.png" alt="Rec"></span>Campanhas</h2>
                 <div class="custom-carousel">
@@ -260,6 +266,8 @@
                     </div>
                 </div>
             </div>
+
+            <a href="#contato"><button class="btn-secundario fade-in-element">Orce seu projeto<i class="fa-solid fa-circle-right"></i></button></a>
         </section>
 
         <!-- Por que contratar a Recz? 
@@ -278,7 +286,7 @@
                             <div class="fade-bottom"></div>
                         </div>
                         <h2>Thomaz (Pai do Rec)</h2>
-                        <p class="team-role">CEO & Fundador</p>
+                        <p class="team-role">CEO, Filmaker & Editor</p>
                     </div>
 
                     <!-- Segundo membro do time -->
@@ -337,7 +345,7 @@
 
     </main>
 
-    <footer>
+    <footer id="footer" class="hidden-content">
         <div class="copyright">
             &copy; 2024, Recz Films | Desenvolvido por <a href="https://www.instagram.com/simplifyweb/" target="_blank">Simplify Web</a>
         </div>
@@ -356,7 +364,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <script src="./js/background-img.js"></script>
     <script src="./js/fade-in-element.js"></script>
     <script src="./js/numbers.js"></script>
     <script src="./js/titulo-move-scroll.js"></script>
@@ -364,6 +371,7 @@
     <script src="./js/scroll-to-section.js"></script>
     <script src="./js/thumb-ativa.js"></script>
     <script src="./js/modal-video.js"></script>
+    <script src="./js/play-animation.js"></script>
     <script src="./js/carrossel.js"></script>
     <script src="./js/simple-select.js"></script>
     <script src="./js/inputs.js"></script>

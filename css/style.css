@@ -7,6 +7,7 @@
     --text-white: #EFE8E6;
     --text-black: #0c0c0c;
     --red: #FE2424;
+    --red-light: #ff1010;
     --greyDark: #5e5a5a;
     --greyLight: #aca7a7;
 }
@@ -19,6 +20,15 @@
 html {
     font-size: 16px;
     /* Base font-size */
+}
+
+#main-content {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#main-content.visible-content {
+    opacity: 1;
 }
 
 body {
@@ -61,6 +71,7 @@ ul {
     font-weight: bold;
     letter-spacing: 0.08em;
     box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
 }
 
 .btn-primario.fade-in-element {
@@ -76,6 +87,32 @@ ul {
 .btn-primario:hover {
     color: var(--text-black);
     background-color: var(--white);
+}
+
+.btn-secundario {
+    border: 1px solid var(--white);
+    box-sizing: border-box;
+    height: 46px;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    border-radius: 23px;
+    width: 230px;
+    font-size: 20px;
+    margin: 40px auto;
+    margin-top: 180px;
+}
+
+.btn-secundario:hover {
+    color: var(--text-black);
+    background-color: var(--white);
+}
+
+.btn-secundario i {
+    margin-left: 10px;
+    transform: translateY(2px);
 }
 
 .fade-top,
@@ -191,12 +228,13 @@ section {
     position: absolute;
     top: 69%;
     left: 12.5%;
+    z-index: 900;
 }
 
 .capa .redes-sociais {
     position: absolute;
     top: 92%;
-    left: 12.5%;
+    left: 13.5%;
     z-index: 9999;
 }
 
@@ -225,6 +263,111 @@ section {
 
 .capa .redes-sociais a:hover i {
     color: var(--text-white);
+}
+
+/* Proporção de tela entre 0.8 e 1.1 */
+@media screen and (max-aspect-ratio: 11/10) {
+    #logo {
+        left: 8%;
+        top: 4%;
+        height: 4%;
+    }
+
+    #time {
+        right: unset;
+        left: 50%;
+        transform: translateX(-52%);
+        height: 58%;
+    }
+
+    .capa .texto {
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 70%;
+        max-width: 70%;
+        text-align: center;
+    }
+
+    .capa .texto.fade-in-element {
+        transform: translate(-50%, 30px);
+    }
+
+    .capa .texto.fade-in {
+        transform: translate(-50%, 0);
+    }
+
+    .capa .btn-primario {
+        top: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
+    }
+
+    .capa .btn-primario.fade-in-element {
+        transform: translate(-50%, 30px);
+    }
+
+    .capa .btn-primario.fade-in {
+        transform: translate(-50%, 0);
+    }
+
+    .capa .redes-sociais {
+        display: none;
+    }
+
+    .fade-top,
+    .fade-bottom {
+        width: 100%;
+    }
+}
+
+/* Proporção de tela entre 1.1 e 1.8 */
+@media screen and (min-aspect-ratio: 11/10) and (max-aspect-ratio: 18/10) {
+    .capa .btn-primario {
+        top: 70%;
+    }
+}
+
+/* Proporção de tela entre 1.1 e 1.8 */
+@media screen and (min-aspect-ratio: 11/10) and (max-aspect-ratio: 18/10) and (max-width: 1010px) {
+    .capa .texto h2 {
+        font-size: 1.6rem;
+    }
+
+    .capa .texto p {
+        font-size: 0.9rem;
+        color: #aca7a7;
+    }
+}
+
+/* Proporção de tela entre 1.8 e 2.1 */
+@media screen and (min-aspect-ratio: 18/10) and (max-aspect-ratio: 21/10) {
+    .capa .btn-primario {
+        top: 70%;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .capa .texto h2 {
+        font-size: 1.7rem;
+    }
+
+    .capa .texto p {
+        font-size: 0.9rem;
+    }
+}
+
+@media(max-width: 390px) {
+
+    .capa .texto h2 {
+        font-size: 1.6rem;
+    }
+
+    .capa .texto p {
+        font-size: 0.8rem;
+    }
 }
 
 .numeros {
@@ -269,7 +412,7 @@ section {
 
 .sobre {
     position: relative;
-    padding: 240px 20px;
+    padding: 240px 50px;
     padding-top: 280px;
 }
 
@@ -303,7 +446,7 @@ section h1 {
 
 .cases {
     position: relative;
-    padding: 100px 20px;
+    padding: 180px 20px;
     padding-top: 500px;
     min-height: 100vh;
     width: 100%;
@@ -745,8 +888,19 @@ footer a:hover {
     transform: scale(1.1);
 }
 
-#loading img {
+#loading-main {
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#loading img, #loading-main img {
     width: 800px;
+    transform: translateX(-20px);
 }
 
 video {
@@ -763,6 +917,7 @@ video {
     left: 0;
     width: 100vw;
     padding: 10px;
+    background: linear-gradient(to bottom, transparent, var(--black));
 }
 
 .controls-container {
@@ -784,11 +939,10 @@ video {
 .progress-bar .progress {
     width: 0;
     height: 100%;
-    background-color: red;
+    background-color: var(--red-light);
     position: absolute;
 }
 
-.play-pause-btn,
 .volume-btn,
 .fullscreen-btn {
     cursor: pointer;
@@ -801,6 +955,35 @@ video {
 .play-pause-btn,
 .volume-btn {
     margin-left: 15px;
+}
+
+.play-pause-btn {
+    position: relative;
+    width: fit-content;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.ring {
+    transform: rotate(-90deg);
+    position: relative;
+}
+
+.ring__circle {
+    stroke-dasharray: 188.496;
+    /* Circunferência do círculo completo (2 * π * raio) */
+    stroke-dashoffset: 188.496;
+    transition: stroke-dashoffset 0.6s;
+    /* Ajuste o tempo da animação para 5 segundos */
+}
+
+.play-pause-btn i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Força o body a esconder a barra de rolagem ao abrir o modal */
@@ -825,50 +1008,11 @@ main.no-scroll {
 }
 
 @media (max-width: 1024px) {
-    .sobre .col-md-6 {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .sobre p {
-        margin-bottom: 60px;
-    }
-
-    .sobre .img-container.right {
-        margin-left: 0;
-    }
-
-    .sobre .retrato-1 {
-        display: none;
-    }
-
-    .sobre .retrato-2 {
-        display: block;
-        padding-left: 0;
-    }
-
-    #contato .col-md-5,
-    #contato .col-md-7 {
-        width: 100%;
-    }
-
-    .contato-box {
-        width: 100%;
-    }
 
     form {
         margin-top: 60px;
     }
-}
 
-@media (max-width: 700px) {
-    .whatsapp-box {
-        right: 20px;
-    }
-
-    .message-box {
-        right: 20px;
-    }
 }
 
 @media(max-width: 550px) {
@@ -878,66 +1022,94 @@ main.no-scroll {
         padding-right: 8%;
     }
 
-    header {
-        display: flex;
-        justify-content: end;
+    .capa .btn-primario.fade-in-element {
+        transform: translate(-50%, 30px) scale(0.85);
     }
 
-    header nav {
-        display: none;
+    .capa .btn-primario.fade-in {
+        transform: translate(-50%, 0) scale(0.85);
     }
 
-    .toggle-menu {
-        display: block;
+    .main-number {
+        font-size: 68px;
+        margin: 0 5px;
     }
 
-    .accordion-1 {
-        width: 100%;
+    .numeros .top {
+        font-size: 32px;
     }
 
-    .pergunta-header {
+    .numeros .bottom {
+        font-size: 13px;
+    }
+
+    section h1 {
+        font-size: 5rem;
+        white-space: initial;
+    }
+
+    .contato h1 {
+        text-align: center;
+    }
+
+    .sobre p {
+        font-size: 1.1em;
+    }
+
+    .form-control,
+    .form-control::placeholder {
         font-size: 14px;
     }
 
-    #emailAddress {
-        font-size: 14px;
+    footer {
+        font-size: 13px;
     }
+
+    #loading-main img {
+        width: 180%;
+        transform: translateX(-10px);
+    }
+
 }
 
 @media (max-width: 430px) {
 
-    .capa .logo img {
-        width: 380px;
+    .contato h1 {
+        font-size: 4.5rem;
     }
 
-    footer {
-        font-size: 12px;
+}
+
+@media (max-width: 390px) {
+    .contato h1 {
+        font-size: 3.8rem;
     }
 
-    .sobre .img-container {
-        min-width: 70%;
-        width: 70%;
+    .sobre h1,
+    .cases h1,
+    .equipe h1 {
+        font-size: 4.5rem;
     }
 
-    #servicos .card {
-        width: 360px;
+    .cases {
+        padding-top: 450px;
+    }
+
+    .equipe {
+        padding-top: 250px;
+    }
+
+    #contato {
+        padding-top: 220px;
+    }
+
+    .form-control,
+    .form-control::placeholder {
+        font-size: 13px;
     }
 }
 
-@media (max-width: 300px) {
-    .capa .logo img {
-        width: 300px;
-    }
-}
 
-@media (max-height: 430px) {
-    .capa {
-        min-height: 150vh;
-    }
-}
+@media (max-height: 430px) {}
 
-@media (max-height: 300px) {
-    .capa {
-        min-height: 200vh;
-    }
-}
+@media (max-height: 300px) {}
