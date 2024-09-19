@@ -29,6 +29,10 @@ function updateBackgroundImage() {
         mainContent.classList.add('visible-content');
         footer.classList.remove('hidden-content');
         footer.classList.add('visible-content');
+
+        // Executar números e fade-in após o loading
+        startNumbersAnimation(); // Chamar a função do numbers.js
+        startFadeInElements(); // Chamar a função do fade-in-element.js
     };
 
     // Mostra o background apenas após o carregamento completo

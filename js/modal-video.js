@@ -1,6 +1,6 @@
 // Obtendo o modal, o botão de fechar, e os elementos body e main
 const modal = document.getElementById("custom-modal");
-const closeModalBtn = document.querySelector(".close"); // Corrigido seletor
+const closeModalBtn = document.querySelector(".close");
 const body = document.body;
 const main = document.querySelector("main");
 let videoElement = null; // Variável para armazenar o elemento de vídeo
@@ -16,7 +16,7 @@ function openModal(videoSrc) {
     <div id="loading" style="display: flex; justify-content: center; align-items: center; height: 100%;">
       <img src="./img/loading.gif" alt="Loading" />
     </div>
-    <video id="modal-video" style="display:none;">
+    <video id="modal-video" autoplay playsinline style="display:none;">
       <source src="${videoSrc}" type="video/mp4">
       Seu navegador não suporta a tag de vídeo.
     </video>
@@ -94,7 +94,7 @@ function openModal(videoSrc) {
     }
   });
 
-  // Fullscreen
+  // Fullscreen - Suporte para diferentes navegadores, incluindo iOS
   fullscreenBtn.addEventListener("click", function () {
     if (videoElement.requestFullscreen) {
       videoElement.requestFullscreen();
@@ -104,6 +104,8 @@ function openModal(videoSrc) {
       videoElement.webkitRequestFullscreen();
     } else if (videoElement.msRequestFullscreen) { // Para IE/Edge
       videoElement.msRequestFullscreen();
+    } else if (videoElement.webkitEnterFullscreen) { // iOS fullscreen
+      videoElement.webkitEnterFullscreen(); // Modo fullscreen específico do iOS
     }
   });
 
@@ -120,7 +122,10 @@ function closeModal() {
   body.classList.remove('no-scroll'); // Restaurar a rolagem do body
   main.classList.remove('no-scroll'); // Restaurar a rolagem do main
 
-  // Limpar o conteúdo do modal
+  // Pausar o vídeo e limpar o conteúdo do modal
+  if (videoElement) {
+    videoElement.pause();
+  }
   const modalBody = document.querySelector(".modal-body");
   modalBody.innerHTML = '';
 }

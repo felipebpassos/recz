@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+function startNumbersAnimation() {
     const duration = 1600; // Duração da animação em milissegundos ajustada para 2 segundos
 
     function animateNumber(elementId, endValue, duration) {
@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let startValue = 0;
         let startTime = null;
 
-        // Função de easing para um ease-out moderado
         function easeOutQuartic(t) {
             return 1 - Math.pow(1 - t, 4);
         }
@@ -47,8 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.5 // Ativa quando 50% do elemento está visível
     });
 
-    // Adiciona elementos ao observador
     document.querySelectorAll('.top').forEach(element => {
         observer.observe(element);
     });
-});
+}

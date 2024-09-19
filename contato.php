@@ -1,25 +1,26 @@
 <?php
-// Importa a classe do PHPMailer
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 
-// Carrega o autoload do Composer para carregar as classes do PHPMailer
+// Carrega o autoload do Composer para carregar as classes do PHPMailer e Dotenv
 require 'vendor/autoload.php';
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
+
+// Carrega as variáveis do arquivo .env
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+// Função para sanitizar os dados do formulário
 function sanitize_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
+    return htmlspecialchars(stripslashes(trim($data)));
 }
 
 // Verifica se o formulário foi submetido
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nome']) && isset($_POST['whatsapp']) && isset($_POST['tratamento']) && isset($_POST['mensagem'])) {
-    // Função para sanitizar as entradas
-
     // Sanitize input data
     $nome = sanitize_input($_POST["nome"]);
-    $celular = sanitize_input($_POST["celular"]);
+    $celular = sanitize_input($_POST["whatsapp"]);
     $tratamento = sanitize_input($_POST["tratamento"]);
     $mensagem = sanitize_input($_POST["mensagem"]);
 
@@ -27,18 +28,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nome']) && isset($_POS
     $mail = new PHPMailer(true);
 
     try {
-        // Configurações do servidor SMTP
+        // Configurações do servidor SMTP usando variáveis de ambiente
         $mail->isSMTP();
-        $mail->Host = 'smtp.hostinger.com.br'; // Hostinger SMTP server
+        $mail->Host = $_ENV['SMTP_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Username = 'contato@clinicapalazzo.com.br'; // Seu e-mail
-        $mail->Password = ''; // Sua senha de e-mail
-        $mail->SMTPSecure = 'ssl'; // Use TLS encryption, `ssl` also accepted
-        $mail->Port = 465; // TCP port to connect to
+        $mail->Username = $_ENV['SMTP_USER'];
+        $mail->Password = $_ENV['SMTP_PASS'];
+        $mail->SMTPSecure = $_ENV['SMTP_SECURE'];
+        $mail->Port = $_ENV['SMTP_PORT'];
 
         // Define o remetente e o destinatário
-        $mail->setFrom('contato@clinicapalazzo.com.br', 'Paula Pontes');
-        $mail->addAddress('contato@clinicapalazzo.com.br');
+        $mail->setFrom($_ENV['SMTP_USER'], 'Simplify Web');
+        $mail->addAddress($_ENV['SMTP_USER']);
 
         // Define o assunto e o corpo do e-mail
         $mail->Subject = 'Novo contato do site';
@@ -46,13 +47,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nome']) && isset($_POS
 
         // Envia o e-mail
         $mail->send();
-        header("Location: https://recz.com.br?success=Mensagem+enviada+com+sucesso!");
+        header("Location: " . $_ENV['SITE_URL'] . "?success=Mensagem+enviada+com+sucesso!");
         exit();
+
     } catch (Exception $e) {
-        header("Location: https://recz.com.br?error=Erro+no+envio+do+email");
+        
+        header("Location: " . $_ENV['SITE_URL'] . "?error=Erro+no+envio+do+email");
         exit();
+
     }
+
 } else {
-    header("Location: https://recz.com.br?error=Erro+no+envio+da+mensagem");
+
+    header("Location: " . $_ENV['SITE_URL'] . "?error=Erro+no+envio+da+mensagem");
     exit();
+
 }

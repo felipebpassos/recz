@@ -4,7 +4,7 @@
 :root {
     --black: #010101;
     --white: #FFF;
-    --text-white: #EFE8E6;
+    --text-white: #e4dcda;
     --text-black: #0c0c0c;
     --red: #FE2424;
     --red-light: #ff1010;
@@ -90,7 +90,7 @@ ul {
 }
 
 .btn-secundario {
-    border: 1px solid var(--white);
+    border: 1px solid var(--text-white);
     box-sizing: border-box;
     height: 46px;
     background-color: var(--black);
@@ -107,7 +107,7 @@ ul {
 
 .btn-secundario:hover {
     color: var(--text-black);
-    background-color: var(--white);
+    background-color: var(--text-white);
 }
 
 .btn-secundario i {
@@ -373,7 +373,7 @@ section {
 .numeros {
     padding: 200px 0;
     min-height: 53px;
-    color: #ffffff;
+    color: var(--text-white);
     text-align: center;
 }
 
@@ -1044,12 +1044,27 @@ main.no-scroll {
     }
 
     section h1 {
+        opacity: 0.25;
         font-size: 5rem;
         white-space: initial;
     }
 
+    .equipe h1.fade-in {
+        opacity: 0.25 !important;
+    }
+
+    .cases h1.fade-in {
+        opacity: 0.25 !important;
+    }
+
     .contato h1 {
+        font-size: 6rem;
+        line-height: 1;
         text-align: center;
+    }
+
+    .contato h1 span {
+        font-size: 5rem;
     }
 
     .sobre p {
@@ -1075,14 +1090,22 @@ main.no-scroll {
 @media (max-width: 430px) {
 
     .contato h1 {
-        font-size: 4.5rem;
+        font-size: 5rem;
+    }
+
+    .contato h1 span {
+        font-size: 4rem;
     }
 
 }
 
 @media (max-width: 390px) {
     .contato h1 {
-        font-size: 3.8rem;
+        font-size: 4.5rem;
+    }
+
+    .contato h1 span {
+        font-size: 3.6rem;
     }
 
     .sobre h1,

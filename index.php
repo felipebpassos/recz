@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
+    <script src="./js/fade-in-element.js"></script>
+    <script src="./js/numbers.js"></script>
     <script src="./js/background-img.js"></script>
 
 </head>
@@ -304,7 +306,7 @@
 
         <!-- Contato -->
         <section class="contato" id="contato">
-            <h1>FALE CONOSCO!</h1>
+            <h1>FALE <span>CONOSCO!</span></h1>
             <div class="container">
                 <form action="contato.php" method="post">
                     <div class="row">
@@ -364,8 +366,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <script src="./js/fade-in-element.js"></script>
-    <script src="./js/numbers.js"></script>
     <script src="./js/titulo-move-scroll.js"></script>
     <script src="./js/toggle-menu.js"></script>
     <script src="./js/scroll-to-section.js"></script>
