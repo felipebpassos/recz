@@ -183,6 +183,7 @@ section {
     padding: 0;
     width: 100%;
     overflow: hidden;
+    max-height: 100vh;
     /* Garante que o conteúdo que ultrapasse a área da seção seja ocultado */
 }
 

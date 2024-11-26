@@ -55,7 +55,7 @@
             <div class="fade-bottom"></div>
             <div class="texto fade-in-element">
                 <h2>Sua empresa com <span style="color: var(--red);">conteúdo de cinema</span></h2>
-                <p>Transfomamos ideias em videos virais. Especialistas em criação de conteúdo. Mais de 50 milhões de visualizações para clientes.</p>
+                <p>Transformamos ideias em vídeos virais. Especialistas em criação de conteúdo. Mais de 50 milhões de visualizações para clientes.</p>
             </div>
             <a href="#contato"><button class="btn-primario fade-in-element">ORCE SEU PROJETO</button></a>
             <div class="redes-sociais">
@@ -173,7 +173,7 @@
                             <div class="play-icon"><i class="fas fa-play"></i></div>
                             <div class="degrade"><span>Ver vídeo</span></div>
                         </div>
-                        <div class="custom-carousel-item" data-video-src="./videos/Eventos/aftermovie.MOV">
+                        <div class="custom-carousel-item" data-video-src="./videos/Eventos/Aftermovie.mp4">
                             <img src="./img/thumbnails/evento04.jpeg" alt="Thumbnail 1" draggable="false">
                             <div class="play-icon"><i class="fas fa-play"></i></div>
                             <div class="degrade"><span>Ver vídeo</span></div>
@@ -222,7 +222,7 @@
                             <div class="degrade"><span>Ver vídeo</span></div>
                         </div>
                         <div class="custom-carousel-item" data-video-src="./videos/Imoveis/exito.mov">
-                            <img src="./img/thumbnails/imovel02.png" alt="Thumbnail 2" draggable="false">
+                            <img src="./img/thumbnails/imovel02.jpg" alt="Thumbnail 2" draggable="false">
                             <div class="play-icon"><i class="fas fa-play"></i></div>
                             <div class="degrade"><span>Ver vídeo</span></div>
                         </div>
@@ -271,10 +271,6 @@
 
             <a href="#contato"><button class="btn-secundario fade-in-element">Orce seu projeto<i class="fa-solid fa-circle-right"></i></button></a>
         </section>
-
-        <!-- Por que contratar a Recz? 
-        <section class="vantagens" id="vantagens">
-        </section> -->
 
         <!-- Seção de Time -->
         <section class="equipe" id="equipe">
