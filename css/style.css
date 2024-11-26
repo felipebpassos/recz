@@ -1008,6 +1008,34 @@ main.no-scroll {
     }
 }
 
+@media (min-width: 1500px) {
+
+    .capa .texto {
+        max-width: 23%;
+    }
+
+    .capa .texto h2 {
+        font-size: 2.5rem;
+    }
+    
+    .capa .texto p {
+        font-size: 1.5rem;
+    }
+
+    .main-number {
+        font-size: 88px;
+    }
+    
+    .numeros .top {
+        font-size: 48px;
+    }
+    
+    .numeros .bottom {
+        font-size: 18px;
+    }
+
+}
+
 @media (max-width: 1024px) {
 
     form {

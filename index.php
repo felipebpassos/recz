@@ -107,9 +107,10 @@
                     </div>
                     <!-- Coluna de texto -->
                     <div class="col-md-6">
-                        <p class="fade-in-element">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p class="fade-in-element">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p class="fade-in-element">Nós somos contadores de histórias.</p>
+                        <p class="fade-in-element">Cada produto, serviço ou pessoa tem uma identidade única. E conseguir transformar isso em histórias, mostradas ao mundo através das telas, é a nossa maior especialidade.</p>
+                        <p class="fade-in-element">Desde 2018 produzimos conteúdo em todo o Brasil. Gravando marcas como Track & Field, Cerveja Patagônia, AMBEV, CaraPreta, Chef Ju Lima - a maior churrasqueira do mundo - PetHealth, Pescatore, Otto e tantos outros clientes queridos.</p>
+                        <p class="fade-in-element">Chame atenção sem perder sua essência.</p>
                     </div>
                 </div>
             </div>
