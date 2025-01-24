@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Felipe Passos | Landing Page desenvolvida por Simplify Web">
-    <meta name="keywords" content="Recz, filmagem, reels, instagram, produtora, Aracaju, aracaju, Sergipe, Melhor produtora de Aracaju, Melhor produtora de Sergipe, Melhor produtora do Nordeste, Melhor produtora do Brasil, filmaker, edição de vídeos, gravações, filmagens">
+    <meta name="keywords"
+        content="Recz, filmagem, reels, instagram, produtora, Aracaju, aracaju, Sergipe, Melhor produtora de Aracaju, Melhor produtora de Sergipe, Melhor produtora do Nordeste, Melhor produtora do Brasil, filmaker, edição de vídeos, gravações, filmagens">
     <meta name="robots" content="index,follow">
 
     <meta property="og:image" content="./img/logo_recz.png">
@@ -23,9 +24,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-    <script src="./js/fade-in-element.js"></script>
     <script src="./js/numbers.js"></script>
-    <script src="./js/background-img.js"></script>
 
 </head>
 
@@ -41,8 +40,8 @@
     }
     ?>
 
-    <div id="loading-main">
-        <img src="./img/loading.gif" alt="Loading" />
+    <div id="fundo-loader">
+        <div id="loader"></div>
     </div>
 
     <main id="main-content" class="hidden-content">
@@ -55,7 +54,8 @@
             <div class="fade-bottom"></div>
             <div class="texto fade-in-element">
                 <h2>Sua empresa com <span style="color: var(--red);">conteúdo de cinema</span></h2>
-                <p>Transformamos ideias em vídeos virais. Especialistas em criação de conteúdo. Mais de 50 milhões de visualizações para clientes.</p>
+                <p>Transformamos ideias em vídeos virais. Especialistas em criação de conteúdo. Mais de 50 milhões de
+                    visualizações para clientes.</p>
             </div>
             <a href="#contato"><button class="btn-primario fade-in-element">ORCE SEU PROJETO</button></a>
             <div class="redes-sociais">
@@ -108,8 +108,12 @@
                     <!-- Coluna de texto -->
                     <div class="col-md-6">
                         <p class="fade-in-element">Nós somos contadores de histórias.</p>
-                        <p class="fade-in-element">Cada produto, serviço ou pessoa tem uma identidade única. E conseguir transformar isso em histórias, mostradas ao mundo através das telas, é a nossa maior especialidade.</p>
-                        <p class="fade-in-element">Desde 2018 produzimos conteúdo em todo o Brasil. Gravando marcas como Track & Field, Cerveja Patagônia, AMBEV, CaraPreta, Chef Ju Lima - a maior churrasqueira do mundo - PetHealth, Pescatore, Otto e tantos outros clientes queridos.</p>
+                        <p class="fade-in-element">Cada produto, serviço ou pessoa tem uma identidade única. E conseguir
+                            transformar isso em histórias, mostradas ao mundo através das telas, é a nossa maior
+                            especialidade.</p>
+                        <p class="fade-in-element">Desde 2018 produzimos conteúdo em todo o Brasil. Gravando marcas como
+                            Track & Field, Cerveja Patagônia, AMBEV, CaraPreta, Chef Ju Lima - a maior churrasqueira do
+                            mundo - PetHealth, Pescatore, Otto e tantos outros clientes queridos.</p>
                         <p class="fade-in-element">Chame atenção sem perder sua essência.</p>
                     </div>
                 </div>
@@ -217,13 +221,13 @@
                 <h2><span><img src="./img/red_dot.png" alt="Rec"></span>Imóveis</h2>
                 <div class="custom-carousel">
                     <div class="custom-carousel-wrapper">
-                        <div class="custom-carousel-item" data-video-src="./videos/Imoveis/dicon.mov">
-                            <img src="./img/thumbnails/imovel01.png" alt="Thumbnail 1" draggable="false">
+                        <div class="custom-carousel-item" data-video-src="./videos/Imoveis/exito.mov">
+                            <img src="./img/thumbnails/imovel02.jpg" alt="Thumbnail 2" draggable="false">
                             <div class="play-icon"><i class="fas fa-play"></i></div>
                             <div class="degrade"><span>Ver vídeo</span></div>
                         </div>
-                        <div class="custom-carousel-item" data-video-src="./videos/Imoveis/exito.mov">
-                            <img src="./img/thumbnails/imovel02.jpg" alt="Thumbnail 2" draggable="false">
+                        <div class="custom-carousel-item" data-video-src="./videos/Imoveis/dicon.mov">
+                            <img src="./img/thumbnails/imovel01.png" alt="Thumbnail 1" draggable="false">
                             <div class="play-icon"><i class="fas fa-play"></i></div>
                             <div class="degrade"><span>Ver vídeo</span></div>
                         </div>
@@ -270,7 +274,8 @@
                 </div>
             </div>
 
-            <a href="#contato"><button class="btn-secundario fade-in-element">Orce seu projeto<i class="fa-solid fa-circle-right"></i></button></a>
+            <a href="#contato"><button class="btn-secundario fade-in-element">Orce seu projeto<i
+                        class="fa-solid fa-circle-right"></i></button></a>
         </section>
 
         <!-- Seção de Time -->
@@ -308,37 +313,61 @@
                 <form action="contato.php" method="post">
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="text" class="form-control" id="inputName" maxlength="100" name="nome" placeholder="Seu nome*" required>
+                            <input type="text" class="form-control" id="inputName" maxlength="100" name="nome"
+                                placeholder="Seu nome*" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" class="form-control" id="inputEmail" maxlength="80" name="email" placeholder="Email*" required>
+                            <input type="email" class="form-control" id="inputEmail" maxlength="80" name="email"
+                                placeholder="Email*" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="tel" class="form-control" id="inputWhatsapp" name="whatsapp" placeholder="WhatsApp* (+DDD)" maxlength="11" required>
+                        <input type="tel" class="form-control" id="inputWhatsapp" name="whatsapp"
+                            placeholder="WhatsApp* (+DDD)" maxlength="11" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="inputEmpresa" name="nomeEmpresa" maxlength="30" placeholder="Instagram da sua empresa*" required>
+                        <input type="text" class="form-control" id="inputEmpresa" name="empresa" maxlength="30"
+                            placeholder="Instagram da sua empresa/negócio*" required>
                     </div>
                     <div class="select-container" id="select-servico">
                         <div class="selected-option">
-                            <span>No que está interessado?*</span>
+                            <span>No que está interessado(a)?*</span>
                             <svg width="12" height="8" viewBox="0 0 42 25">
-                                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7"
-                                    stroke-linecap="round"></path>
+                                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path>
                             </svg>
                         </div>
                         <div class="options-container">
                             <div class="option" data-value="1">Vídeo único/pontual</div>
                             <div class="option" data-value="2">Pacote mensal</div>
-                            <div class="option" data-value="3">Estou aberto a opções</div>
+                            <div class="option" data-value="3">Estou aberto(a) a opções</div>
                         </div>
                     </div>
+                    <!-- Hidden Input Serviço -->
+                    <input type="hidden" id="hiddenInputServico" name="servico" required>
                     <div class="form-group mb-4">
-                        <textarea class="form-control" id="inputMessage" rows="3" maxlength="500" name="mensagem" placeholder="Fale sobre seu projeto" required></textarea>
+                        <textarea class="form-control" id="inputMessage" rows="3" maxlength="500" name="mensagem"
+                            placeholder="Fale um pouco sobre sua ideia. (opcional)"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">ENVIAR<i class="fa-solid fa-circle-right"></i></button>
+                    <button type="submit" onclick="return validarFormulario()" class="btn btn-primary">ENVIAR<i
+                            class="fa-solid fa-circle-right"></i></button>
                 </form>
+
+                <script>
+                    function validarFormulario() {
+                        // Obtém o valor do campo oculto
+                        var servico = document.getElementById('hiddenInputServico').value;
+
+                        // Verifica se o campo está vazio
+                        if (servico === '') {
+                            alert("Por favor, selecione uma opção de serviço.");
+                            return false; // Impede o envio do formulário
+                        }
+
+                        // Se o campo estiver preenchido, o formulário será enviado
+                        return true;
+                    }
+                </script>
+
             </div>
         </section>
 
@@ -346,7 +375,8 @@
 
     <footer id="footer" class="hidden-content">
         <div class="copyright">
-            &copy; 2024, Recz Films | Desenvolvido por <a href="https://www.instagram.com/simplifyweb/" target="_blank">Simplify Web</a>
+            &copy; 2024, Recz Films | Desenvolvido por <a href="https://www.instagram.com/simplifyweb/"
+                target="_blank">Simplify Web</a>
         </div>
     </footer>
 
@@ -363,6 +393,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+    <script src="./js/loading.js"></script>
+    <script src="./js/zoom.js"></script>
+    <script src="./js/background-img.js"></script>
+    <script src="./js/fade-in-element.js"></script>
     <script src="./js/titulo-move-scroll.js"></script>
     <script src="./js/toggle-menu.js"></script>
     <script src="./js/scroll-to-section.js"></script>

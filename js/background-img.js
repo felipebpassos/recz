@@ -2,7 +2,6 @@ function updateBackgroundImage() {
     const backgroundImage = document.getElementById('background');
     const mainContent = document.getElementById('main-content');
     const footer = document.getElementById('footer');
-    const loading = document.getElementById('loading-main');
     const width = window.innerWidth;
     const height = window.innerHeight;
     const ratio = width / height;
@@ -24,15 +23,10 @@ function updateBackgroundImage() {
 
     // Quando a imagem for carregada, esconda o loading e mostre o conteúdo
     backgroundImage.onload = () => {
-        loading.style.display = 'none';  // Esconde o loading
         mainContent.classList.remove('hidden-content');
         mainContent.classList.add('visible-content');
         footer.classList.remove('hidden-content');
         footer.classList.add('visible-content');
-
-        // Executar números e fade-in após o loading
-        startNumbersAnimation(); // Chamar a função do numbers.js
-        startFadeInElements(); // Chamar a função do fade-in-element.js
     };
 
     // Mostra o background apenas após o carregamento completo

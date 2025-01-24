@@ -191,6 +191,7 @@ section {
     display: block;
     width: 100%;
     height: auto;
+    opacity: 0.5;
     /* Mantém a proporção da imagem */
 }
 
@@ -206,7 +207,8 @@ section {
     position: absolute;
     left: 12.5%;
     top: 8%;
-    height: 7%;
+    height: 6%;
+    max-height: 50px;
 }
 
 .capa .texto {
@@ -236,13 +238,14 @@ section {
     position: absolute;
     top: 92%;
     left: 13.5%;
-    z-index: 9999;
+    z-index: 1000;
 }
 
 .capa .redes-sociais a {
-    background-color: var(--white);
-    width: 32px;
-    height: 32px;
+    background-color: var(--black);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.16);
+    width: 36px;
+    height: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,18 +255,16 @@ section {
 
 .capa .redes-sociais a i {
     font-size: 20px;
-    color: var(--black);
-    transform: translate(0.5px, 0.5px);
+    color: var(--text-white);
     transition: all 0.5s ease;
 }
 
 .capa .redes-sociais a:hover {
-    background-color: var(--black);
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    background-color: var(--white);
 }
 
 .capa .redes-sociais a:hover i {
-    color: var(--text-white);
+    color: var(--black);
 }
 
 /* Proporção de tela entre 0.8 e 1.1 */
@@ -889,17 +890,37 @@ footer a:hover {
     transform: scale(1.1);
 }
 
-#loading-main {
-    position: fixed;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#fundo-loader {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    background-color: var(--black);
+    position: fixed;
+    top: 0;
+    z-index: 9998;
 }
 
-#loading img, #loading-main img {
+#loader {
+    width: 230px;
+    height: 55px;
+    background: var(--black) url("../img/logo.png") center no-repeat;
+    background-size: contain;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+@media (max-width: 500px) {
+
+    #loader {
+        width: 150px;
+        height: 40px;
+    }
+
+}
+
+#loading img {
     width: 800px;
     transform: translateX(-20px);
 }
@@ -1107,11 +1128,6 @@ main.no-scroll {
 
     footer {
         font-size: 13px;
-    }
-
-    #loading-main img {
-        width: 180%;
-        transform: translateX(-10px);
     }
 
 }
